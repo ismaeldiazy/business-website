@@ -20,5 +20,12 @@ from django.conf import settings
 urlpatterns = [
     # Core paths
     path('', include('core.urls')),
+    # Services paths
+    path('services/', include('services.urls')),
+    # Admin paths
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
