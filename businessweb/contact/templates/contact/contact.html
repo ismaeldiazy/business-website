@@ -17,9 +17,13 @@
             </h2>
 
             <!-- Formulario de contacto -->
-            <table>
-              {{form.as_table}}
-            </table>  
+            <form action="" method="POST">
+              {% csrf_token %}
+              <table>
+                {{form.as_table}}
+              </table>
+              <input type="submit" value="Enviar">
+            </form>
             <!--<form>
                 <div class="form-group">
                     <label>Nombre *</label>
