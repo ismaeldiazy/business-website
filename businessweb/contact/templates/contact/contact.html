@@ -17,6 +17,9 @@
             </h2>
 
             <!-- Formulario de contacto -->
+            {% if 'ok' in request.GET %}
+              <p><b>Mensaje enviado con éxito</b></p>
+            {% endif %}
             <form action="" method="POST">
               {% csrf_token %}
               <table>
