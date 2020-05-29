@@ -18,7 +18,9 @@
 
             <!-- Formulario de contacto -->
             {% if 'ok' in request.GET %}
-              <p><b>Mensaje enviado con éxito</b></p>
+              <p class="alert alert-success"><b>Mensaje enviado con éxito</b></p>
+            {% else %}
+              <p><b class="alert alert-danger">Ha habido un problema en el envío</b></p>
             {% endif %}
 
             <!--<form action="" method="POST">
